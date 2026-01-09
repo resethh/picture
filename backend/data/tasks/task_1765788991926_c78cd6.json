@@ -1,0 +1,22 @@
+{
+  "id": "task_1765788991926_c78cd6",
+  "status": "success",
+  "progress": 100,
+  "mode": "image",
+  "modelName": "全能图片 Pro",
+  "prompt": "北京变绿色",
+  "imageIds": [],
+  "params": {
+    "ratio": "1:1",
+    "count": 1
+  },
+  "resultImages": [
+    {
+      "imageId": "img_1765788997536_24d24e",
+      "url": "/media/generated/img_1765788997536_24d24e.png"
+    }
+  ],
+  "error": null,
+  "createdAt": "2025-12-15T08:56:31.926909Z",
+  "updatedAt": "2025-12-15T08:56:37.542865Z"
+}

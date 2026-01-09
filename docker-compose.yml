@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # PostgreSQL 数据库
+  postgres:
+    image: postgres:15-alpine
+    container_name: picture_postgres
+    environment:
+      POSTGRES_DB: picture
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/app/init_db.sql:/docker-entrypoint-initdb.d/01_init.sql
+      - ./backend/app/migrations/add_is_public_field.sql:/docker-entrypoint-initdb.d/02_migration.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - picture_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 后端服务
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: picture_backend
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: picture
+      DB_USER: postgres
+      DB_PASSWORD: root
+      DB_MIN_CONN: 1
+      DB_MAX_CONN: 10
+    volumes:
+      - backend_data:/app/data
+      - backend_media:/app/media
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - picture_network
+    restart: unless-stopped
+
+  # 前端服务
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: picture_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - picture_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  backend_data:
+    driver: local
+  backend_media:
+    driver: local
+
+networks:
+  picture_network:
+    driver: bridge

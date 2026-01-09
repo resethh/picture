@@ -1,0 +1,22 @@
+{
+  "id": "task_1765788187832_d8ecfe",
+  "status": "success",
+  "progress": 100,
+  "mode": "image",
+  "modelName": "全能图片 Pro",
+  "prompt": "生成图片",
+  "imageIds": [],
+  "params": {
+    "ratio": "1:1",
+    "count": 1
+  },
+  "resultImages": [
+    {
+      "imageId": "img_1765788193437_8bcca6",
+      "url": "/media/generated/img_1765788193437_8bcca6.png"
+    }
+  ],
+  "error": null,
+  "createdAt": "2025-12-15T08:43:07.833072Z",
+  "updatedAt": "2025-12-15T08:43:13.443797Z"
+}

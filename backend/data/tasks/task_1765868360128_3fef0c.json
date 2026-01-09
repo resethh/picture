@@ -1,0 +1,26 @@
+{
+  "id": "task_1765868360128_3fef0c",
+  "status": "success",
+  "progress": 100,
+  "mode": "image",
+  "modelName": "全能图片 Pro",
+  "prompt": "合成图片",
+  "imageIds": [
+    "img_1765868066288_66914e",
+    "img_1765868061387_e771f4",
+    "img_1765868061408_911a31"
+  ],
+  "params": {
+    "ratio": "1:1",
+    "count": 1
+  },
+  "resultImages": [
+    {
+      "imageId": "img_1765868365780_e6f83d",
+      "url": "/media/generated/img_1765868365780_e6f83d.png"
+    }
+  ],
+  "error": null,
+  "createdAt": "2025-12-16T06:59:20.128732Z",
+  "updatedAt": "2025-12-16T06:59:25.807722Z"
+}

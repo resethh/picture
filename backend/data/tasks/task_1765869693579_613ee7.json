@@ -1,0 +1,25 @@
+{
+  "id": "task_1765869693579_613ee7",
+  "status": "success",
+  "progress": 100,
+  "mode": "image",
+  "modelName": "全能图片 Pro",
+  "prompt": "图一女生传入图二风景中",
+  "imageIds": [
+    "img_1765869676727_64cfc5",
+    "img_1765869676686_35b84f"
+  ],
+  "params": {
+    "ratio": "1:1",
+    "count": 1
+  },
+  "resultImages": [
+    {
+      "imageId": "img_1765869699200_8c63e4",
+      "url": "/media/generated/img_1765869699200_8c63e4.png"
+    }
+  ],
+  "error": null,
+  "createdAt": "2025-12-16T07:21:33.579193Z",
+  "updatedAt": "2025-12-16T07:21:39.214974Z"
+}

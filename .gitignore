@@ -1,0 +1,78 @@
+# 依赖目录
+node_modules/
+frontend/node_modules/
+backend/venv/
+backend/venv*/
+
+# 构建输出
+dist/
+build/
+*.min.js
+*.min.css
+
+# 环境变量
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 日志文件
+logs/
+*.log
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE文件
+.vscode/
+.idea/
+*.iml
+*.iws
+*.sublime-project
+*.sublime-workspace
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 上传和生成的媒体文件
+media/
+backend/media/
+backend/data/tasks/
+backend/data/projects/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git/
+
+# SASS/SCSS
+.sass-cache/
+.sass-cache/*/
+*.css.map
+
+# Windows
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
