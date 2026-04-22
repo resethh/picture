@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir *)",
+      "Bash(python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload)",
+      "Bash(npm run *)",
+      "Bash(cmd *)",
+      "Bash(/c/Python314/python.exe *)",
+      "Bash(/c/Program Files/nodejs/npm.cmd *)",
+      "Bash(\"/c/Program Files/nodejs/npm.cmd\" run dev)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(\"/c/Program Files/nodejs/npm.cmd\" install)",
+      "Bash(\"/c/Program Files/nodejs/npm.cmd\" install vite --save-dev)",
+      "Bash(/c/Program Files/nodejs/node.exe *)"
+    ]
+  }
+}

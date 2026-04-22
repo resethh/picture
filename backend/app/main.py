@@ -13,7 +13,7 @@ async def lifespan(app: FastAPI):
     """应用生命周期管理"""
     # 启动时初始化数据库
     init_database()
-    print("✅ PostgreSQL 数据库已连接")
+    print("[OK] PostgreSQL 数据库已连接")
     
     yield
     

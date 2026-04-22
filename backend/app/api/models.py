@@ -75,6 +75,16 @@ async def list_all_models(active_only: bool = Query(True)):
     return result
 
 
+@router.get("/providers")
+async def get_providers():
+    """获取所有AI供应商"""
+    providers = ProviderManager.get_all_providers()
+    return {
+        'providers': providers,
+        'total': len(providers)
+    }
+
+
 @router.get("/{model_id}")
 async def get_model_detail(model_id: str):
     """获取模型详情"""
@@ -214,11 +224,3 @@ async def list_model_configs(model_id: str):
 
 # =============== 供应商管理 ===============
 
-@router.get("/providers")
-async def get_providers():
-    """获取所有AI供应商"""
-    providers = ProviderManager.get_all_providers()
-    return {
-        'providers': providers,
-        'total': len(providers)
-    }

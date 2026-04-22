@@ -30,9 +30,9 @@ class Database:
                 user=user,
                 password=password
             )
-            print(f"✅ 数据库连接池初始化成功: {host}:{port}/{database}")
+            print(f"[OK] 数据库连接池初始化成功: {host}:{port}/{database}")
         except Exception as e:
-            print(f"❌ 数据库连接失败: {e}")
+            print(f"[ERROR] 数据库连接失败: {e}")
             raise
     
     @contextmanager
@@ -66,7 +66,7 @@ class Database:
         """关闭数据库连接池"""
         if self.connection_pool:
             self.connection_pool.closeall()
-            print("✅ 数据库连接池已关闭")
+            print("[OK] 数据库连接池已关闭")
 
 
 # 全局数据库实例

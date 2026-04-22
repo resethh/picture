@@ -13,6 +13,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./backend/app/init_db.sql:/docker-entrypoint-initdb.d/01_init.sql
       - ./backend/app/migrations/add_is_public_field.sql:/docker-entrypoint-initdb.d/02_migration.sql
+      - ./backend/app/migrations/add_model_management.sql:/docker-entrypoint-initdb.d/03_model_management.sql
     ports:
       - "5432:5432"
     networks:
